@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer")
 
 const url = "https://mygarage.bmwusa.com/"
 
-exports.check = function (productionCode, username, password) {
+exports.check = function (username, password) {
   return new Promise(async (resolve, reject) => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()

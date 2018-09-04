@@ -6,9 +6,8 @@ Node module that scrapes your latest production order status.
 
 This module provides just one method:
 
-`bimmerscraper.check(productionCode, username, password)`
+`bimmerscraper.check(username, password)`
 
-* `productionCode`: The car's production number, on the dealer's vehicle inquiry report that details the order
 * `username`: My Garage username
 * `password`: My Garage password
 
