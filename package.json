@@ -1,0 +1,14 @@
+{
+  "name": "bimmerscraper",
+  "version": "1.0.0",
+  "description": "Scrapes production order status from the BMW My Garage website.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.7.0"
+  }
+}
