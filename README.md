@@ -17,7 +17,7 @@ This module provides just one method:
 const bimmerscraper = require("bimmerscraper")
 
 bimmerscraper
-  .check("1234567", "driver@example.com", "abc123")
+  .check("driver@example.com", "abc123")
   .then((vehicles) => {
     vehicles.forEach((vehicle) => {
       console.log("Status code: " + vehicle.orderStatusCode)
