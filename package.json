@@ -1,6 +1,6 @@
 {
   "name": "bimmerscraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scrapes production order status from the BMW My Garage website.",
   "main": "main.js",
   "scripts": {
