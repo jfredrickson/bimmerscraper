@@ -26,10 +26,8 @@ exports.check = function (username, password, connect_options = {}) {
     try {
       await page.goto(url)
       await page.waitForNavigation()
-      await page.click("input#loginEmailAddressInput")
-      await page.keyboard.type(username)
-      await page.click("input#loginPasswordInput")
-      await page.keyboard.type(password)
+      await page.type("input#loginEmailAddressInput", username)
+      await page.type("input#loginPasswordInput", password)
       await page.click("#loginBtn")
       // Allow the garage page to load; this is when the page will make the API request.
       await page.waitForSelector("a.track-vehicle")
