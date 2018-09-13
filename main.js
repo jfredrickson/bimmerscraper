@@ -24,8 +24,7 @@ exports.check = function (username, password, connect_options = {}) {
     })
 
     try {
-      await page.goto(url)
-      await page.waitForNavigation()
+      await page.goto(url, { waitUntil: "networkidle0" })
       await page.type("input#loginEmailAddressInput", username)
       await page.type("input#loginPasswordInput", password)
       await page.click("#loginBtn")
