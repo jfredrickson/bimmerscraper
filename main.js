@@ -2,9 +2,14 @@ const puppeteer = require("puppeteer")
 
 const url = "https://mygarage.bmwusa.com/"
 
-exports.check = function (username, password) {
+exports.check = function (username, password, connect_options = {}) {
   return new Promise(async (resolve, reject) => {
-    const browser = await puppeteer.launch()
+    let browser = {}
+    if (Object.keys(connect_options).length > 0) {
+      browser = await puppeteer.connect(connect_options)
+    } else {
+      browser = await puppeteer.launch()
+    }
     const page = await browser.newPage()
 
     // Instead of scraping the web page, let the page make its request to its API, then
